@@ -1,0 +1,11 @@
+{
+    "items": [
+        { "src": "images/makes/ford.png", "value": "dish", "headerText": "ford" },
+        { "src": "images/makes/holden.png", "value": "glass", "headerText": "glass" },
+        { "src": "images/makes/bmw.png", "value": "stone", "headerText": "stone" },
+        { "src": "images/makes/audi.png", "value": "shell", "headerText": "shell" },
+		{ "src": "images/makes/chrysler.png", "value": "shell", "headerText": "shell" },
+		{ "src": "images/makes/honda.png", "value": "shell", "headerText": "shell" }
+
+    ]
+}

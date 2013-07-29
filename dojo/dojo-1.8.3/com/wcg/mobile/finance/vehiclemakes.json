@@ -1,0 +1,28 @@
+// sample.json
+{
+    "items": [
+        { "src": "../images/avatar.png", "value": "dish", "headerText": "dish" },
+        { "src": "images/glass.jpg", "value": "glass", "headerText": "glass" },
+        { "src": "images/stone.jpg", "value": "stone", "headerText": "stone" },
+        { "src": "images/shell.jpg", "value": "shell", "headerText": "shell" }
+		{ "src": "images/shell.jpg", "value": "shell", "headerText": "shell" }
+		{ "src": "images/shell.jpg", "value": "shell", "headerText": "shell" }
+		{ "src": "images/shell.jpg", "value": "shell", "headerText": "shell" }
+		{ "src": "images/shell.jpg", "value": "shell", "headerText": "shell" }
+		{ "src": "images/shell.jpg", "value": "shell", "headerText": "shell" }
+		{ "src": "images/shell.jpg", "value": "shell", "headerText": "shell" }
+		{ "src": "images/shell.jpg", "value": "shell", "headerText": "shell" }
+		{ "src": "images/shell.jpg", "value": "shell", "headerText": "shell" }
+		{ "src": "images/shell.jpg", "value": "shell", "headerText": "shell" }
+		{ "src": "images/shell.jpg", "value": "shell", "headerText": "shell" }
+		{ "src": "images/shell.jpg", "value": "shell", "headerText": "shell" }
+		{ "src": "images/shell.jpg", "value": "shell", "headerText": "shell" }
+		{ "src": "images/shell.jpg", "value": "shell", "headerText": "shell" }
+		{ "src": "images/shell.jpg", "value": "shell", "headerText": "shell" }
+		{ "src": "images/shell.jpg", "value": "shell", "headerText": "shell" }
+		{ "src": "images/shell.jpg", "value": "shell", "headerText": "shell" }
+		{ "src": "images/shell.jpg", "value": "shell", "headerText": "shell" }
+		{ "src": "images/shell.jpg", "value": "shell", "headerText": "shell" }
+
+    ]
+}

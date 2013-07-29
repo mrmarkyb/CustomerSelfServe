@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" style="width:100%; height:100%">
+    <head>
+    	<link rel="stylesheet" href="/dojo/dojo-1.8.3/dijit/themes/tundra/tundra.css">
+        <title>A Mobile Dialog Harness</title>
+        <script type="text/javascript">
+    		var dojoConfig = {
+				//locale: langCode + "-" + countryCode,
+				locale: ".",
+				async: true,
+                parseOnLoad: true,
+                packages: [{
+   			               name: "com",
+   			               location: "/core/com"
+   			             },
+   			             {
+   			               name: "example",
+   			               location: "/examples/example"
+   			             }]
+            };
+        </script>
+        <!-- DOJO set up -->
+        <script type="text/javascript" src="/dojo/dojo-1.8.3/dojo/dojo.js">
+        </script>
+
+        <script>inDebug=false</script>
+        <!-- Our own style extensions / overrides -->
+    </head>
+    <body class="tundra" style="width:100%;height:100%">
+    <!--  -->
+
+        <script type="text/javascript">
+        require([
+                 "dojo/_base/window",
+                 "dojo/dom-construct",
+                 "dojox/mobile/SimpleDialog",
+                 "dojox/mobile/ProgressIndicator",
+                 "dojox/mobile/Button"
+               ], function(win, domConstruct, SimpleDialog, ProgressIndicator, Button){
+                 showProgIndDlg = function(){
+                   var piIns = ProgressIndicator.getInstance();
+                   var hideProgIndDlg = function(simpleDlg){
+                     piIns.stop();
+                     simpleDlg.hide();
+                   }
+
+                   var dlg = new SimpleDialog();
+                   win.body().appendChild(dlg.domNode);
+                   var msgBox = domConstruct.create("div",
+                                                    {class: "mblSimpleDialogText",
+                                                     innerHTML: "Processing..."},
+                                                     dlg.domNode);
+                   var piBox = domConstruct.create("div",
+                                                   {class: "mblSimpleDialogText"},
+                                                    dlg.domNode);
+                   piBox.appendChild(piIns.domNode);
+                   var cancelBtn = new Button({class: "mblSimpleDialogButton mblRedButton",
+                                               innerHTML: "Cancel"});
+                   cancelBtn.connect(cancelBtn.domNode, "click",
+                                     function(e){hideProgIndDlg(dlg)});
+                   cancelBtn.placeAt(dlg.domNode);
+                   dlg.show();
+                   piIns.start();
+
+                   setTimeout(function(){
+                     /*
+                      * write your task here
+                      */
+                     hideProgIndDlg(dlg);
+                   }, 0);
+                 }();
+               });
+        </script>
+        <div id="app">
+		</div>
+    </body>
+</html>

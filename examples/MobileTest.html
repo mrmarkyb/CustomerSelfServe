@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" style="width:100%; height:100%">
+    <head>
+    <meta name="viewport" 
+    	content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+        <title>A Mobile Dialog Harness</title>
+        <script type="text/javascript">
+    		var dojoConfig = {
+				//locale: langCode + "-" + countryCode,
+				locale: ".",
+				async: true
+                parseOnLoad: true,
+                packages: [{
+   			               name: "com",
+   			               location: "/core/com"
+   			             },
+   			             {
+   			               name: "example",
+   			               location: "/examples/example"
+   			             }]
+            };
+        </script>
+        <!-- DOJO set up -->
+        <script type="text/javascript" src="/dojo/dojo-1.8.3/dojo/dojo.js">
+        </script>
+
+        <script>inDebug=false</script>
+        <!-- Our own style extensions / overrides -->
+    </head>
+    <body>
+
+
+		<div id="settings" data-dojo-type="dojox.mobile.View" data-dojo-props="selected: true">
+		 
+		    <!-- a sample heading -->
+		    <h1 data-dojo-type="dojox.mobile.Heading">Settings</h1>
+		 
+		    <!-- a rounded rectangle list container -->
+		    <ul data-dojo-type="dojox.mobile.RoundRectList">
+		 
+		        <!-- list item with an icon containing a switch -->
+		        <li data-dojo-type="dojox.mobile.ListItem" data-dojo-props="icon:'../../app/images/i-icon-1.png'">
+		            Airplane Mode
+		            <!-- the switch -->
+		            <div class="mblItemSwitch" data-dojo-type="dojox.mobile.Switch"></div>
+		        </li>
+		        <li data-dojo-type="dojox.mobile.ListItem"
+		              data-dojo-props="icon:'../../app/images/i-icon-2.png', rightText:'mac', moveTo: 'general'">
+		            Wi-Fi
+		        </li>
+		        <li data-dojo-type="dojox.mobile.ListItem"
+		              data-dojo-props="icon:'../../app/images/i-icon-3.png', rightText:'AcmePhone'">
+		            Carrier
+		        </li>
+		    </ul>
+		</div>
+		<div id="general" data-dojo-type="dojox.mobile.View">
+		    <h1 data-dojo-type="dojox.mobile.Heading" data-dojo-props="back:'Settings', moveTo:'settings'">
+		            General
+		    </h1>
+		    <ul data-dojo-type="dojox.mobile.RoundRectList">
+		        <li data-dojo-type="dojox.mobile.ListItem" data-dojo-props="moveTo:'about'">
+		            About
+		        </li>
+		        <li data-dojo-type="dojox.mobile.ListItem" data-dojo-props="rightText: '2h 40m', moveTo: 'usage'">
+		            Usage
+		        </li>
+		    </ul>
+		</div>
+		 
+		<div id="about" data-dojo-type="dojox.mobile.View">
+		    <h1 data-dojo-type="dojox.mobile.Heading" data-dojo-props="back:'General', moveTo:'general'">
+		            About
+		    </h1>
+		    <h2 data-dojo-type="dojox.mobile.RoundRectCategory">Generic Mobile Device</h2>
+		    <ul data-dojo-type="dojox.mobile.RoundRectList">
+		        <li data-dojo-type="dojox.mobile.ListItem" data-dojo-props="rightText:'AcmePhone'">
+		            Network
+		        </li>
+		        <li data-dojo-type="dojox.mobile.ListItem" data-dojo-props="rightText:'AcmePhone'">
+		            Line
+		        </li>
+		        <li data-dojo-type="dojox.mobile.ListItem" data-dojo-props="rightText:'1024'">
+		            Songs
+		        </li>
+		        <li data-dojo-type="dojox.mobile.ListItem" data-dojo-props="rightText:'10'">
+		            Videos
+		        </li>
+		        <li data-dojo-type="dojox.mobile.ListItem" data-dojo-props="rightText:'96'">
+		            Photos
+		        </li>
+		        <li data-dojo-type="dojox.mobile.ListItem" data-dojo-props="rightText:'2'">
+		            Applications
+		        </li>
+		        <li data-dojo-type="dojox.mobile.ListItem" data-dojo-props="rightText:'29.3 BG'">
+		            Capacity
+		        </li>
+		        <li data-dojo-type="dojox.mobile.ListItem" data-dojo-props="rightText:'28.0 BG'">
+		            Available
+		        </li>
+		        <li data-dojo-type="dojox.mobile.ListItem" data-dojo-props="rightText:'3.0 (7A341)'">
+		            Version
+		        </li>
+		    </ul>
+		</div>
+		
+		<div id="usage" data-dojo-type="dojox.mobile.View" >
+			<h1 data-dojo-type="dojox.mobile.Heading" data-dojo-props="back:'General', moveTo:'general'">
+		            Usage
+		    </h1>
+		    <div>
+		    
+		    This is a test!!!!111
+		    </div>
+			
+		
+		</div>
+		<script>
+			require(["dojox/mobile/parser", "dojox/mobile/deviceTheme", "dojox/mobile/compat", "dojox/mobile"], 
+					function(parser, deviceTheme) {
+				
+				parser.parse();
+			});
+		</script>
+    </body>
+</html>

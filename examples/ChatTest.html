@@ -1,0 +1,118 @@
+<!doctype html>
+<html>
+<head>
+<script src='https://cdn.firebase.com/v0/firebase.js'></script>
+<script type='text/javascript'
+        src='https://cdn.firebase.com/v0/firebase-auth-client.js'>
+</script>
+<script type="text/javascript" src="/dojo/dojo-1.8.3/dojo/dojo.js"></script>
+<link rel='stylesheet' type='text/css' href='../css/example.css'>
+</head>
+<body>
+	
+<div id="chatView" data-dojo-type="dojox/mobile/View" data-dojo-props='selected:true' style="height:100%;">
+<!-- 	<div id="chatLoginForm"> -->
+<!-- 		<input data-dojo-type="dojox/mobile/TextBox" id='loginEmail' placeholder='email'>  -->
+<!-- 		<input data-dojo-type="dojox/mobile/TextBox" id='loginPassword' placeholder='password'> -->
+<!-- 		<button id="chatLoginButton" data-dojo-type="dojox/mobile/Button" data-dojo-props="onClick:login">Login</button> -->
+<!-- 		<button id="chatNewUserButton" data-dojo-type="dojox/mobile/Button" data-dojo-props="onClick:signup">New User</button> -->
+<!-- 	</div> -->
+
+		<div id='messagesDiv' style="height:80%;"></div>
+		<div class="sendMessage" style="height:20%;">
+			<textarea data-dojo-type="dojox/mobile/TextArea" id='messageInput' placeholder='Message'></textarea>
+			<button id="sendMessageButton" data-dojo-type="dojox/mobile/Button">Send</button>
+		</div>
+</div>
+
+	<script>
+		require([ "dojo/dom", "dojo/on", "dojo/dom-construct", "dojo/query",
+				"dojo/dom-style", "dojox/mobile/parser", "dojox/mobile/deviceTheme", "dojox/mobile/deviceTheme",
+				"dojox/mobile/compat", "dojox/mobile", "dojox/mobile/Button", 
+				"dojox/mobile/TextBox", "dojox/mobile/TextArea", "dojox/mobile/View", "dojox/mobile/ScrollableView" ], function(dom, on, domConstruct, query,
+				domStyle, parser, deviceTheme) {
+			var chatRef = {};
+			var firebaseRef = new Firebase('https://calms-mobile-chat.firebaseIO.com');
+			var authClient = new FirebaseAuthClient(firebaseRef, function(error,
+					user) {
+				if (error) {
+					// an error occurred while attempting login
+					console.log(error);
+				} else if (user) {
+					// user authenticated with Firebase
+					
+					chatRef = new Firebase('https://calms-mobile-chat.firebaseIO.com/chat/' + user.id);
+					chatRef.on('child_added', function(snapshot) {
+						var message = snapshot.val();
+						displayChatMessage(message.name, message.text);
+					});
+// 					domStyle.set(dom.byId("chatLoginForm"), "display", "none");
+// 					domStyle.set(dom.byId("chatMessages"), "display", "block");
+// 					dom.byId('loginEmail').value = '';
+// 					dom.byId('loginPassword').value = '';
+					console.log('User ID: ' + user.id + ', Provider: '
+							+ user.provider);
+				} else {
+					// user is logged out
+				}
+			});
+
+			query('#loginPassword').on("keypress", function(e) {
+				if (e.keyCode == 13) {
+					login();
+				}
+			});
+// 			query('#chatLoginButton').on("click", login);
+// 			query('#chatNewUserButton').on("click", signup);
+
+			
+			function sendMessage() {
+				var name = dom.byId('nameInput').value;
+				var text = dom.byId('messageInput').value;
+				chatRef.push({
+					name : name,
+					text : text
+				});
+				dom.byId('messageInput').value = '';
+			};
+			
+			function displayChatMessage(name, text) {
+				domConstruct.create("div", {
+					innerHTML : "<em>" + name + ": " + text + "</em>"
+				}, dom.byId("messagesDiv"));
+			};
+			parser.parse();
+
+// 			function login() {
+// 				var email = dom.byId('loginEmail').value;
+// 				var password = dom.byId('loginPassword').value;
+// 				authClient.login("password", {
+// 					email : email,
+// 					password : password
+// 				});
+
+				
+// 			}
+// 			;
+
+// 			function signup() {
+// 				var email = dom.byId('loginEmail').value;
+// 				var password = dom.byId('loginPassword').value;
+// 				authClient.createUser(email, password, function(error, user) {
+// 					if (!error) {
+// 						domStyle.set(dom.byId("chatLoginForm"), "display",
+// 								"none");
+// 					} else {
+// 						console.log("Error logging in - " + error);
+// 					}
+// 					dom.byId('loginEmail').value = '';
+// 					dom.byId('loginPassword').value = '';
+// 				});
+
+// 			}
+
+		});
+	</script>
+</body>
+
+</html>

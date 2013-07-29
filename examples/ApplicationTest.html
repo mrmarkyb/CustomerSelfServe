@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+	style="width:100%; height:100%">
+<head>
+<meta name="viewport"
+	content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<title>A Mobile Dialog Harness</title>
+<script type="text/javascript">
+	var dojoConfig = {
+		//locale: langCode + "-" + countryCode,
+		locale : ".",
+		async : false,
+		mblThemeFiles:['base','Button', 'TabBar', 'SimpleDialog', 'Accordion', 'Carousel', 'PageIndicator',  ['com.wcg.mobile','WcgMobile']],
+		packages : [ {
+			name : "com",
+			location : "/core/com"
+		}, {
+			name : "example",
+			location : "/examples/example"
+		} ]
+	};
+</script>
+<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+<!-- DOJO set up -->
+<script type="text/javascript" src="/dojo/dojo-1.8.3/dojo/dojo.js">
+	
+</script>
+<script src='https://cdn.firebase.com/v0/firebase.js'></script>
+<script type='text/javascript'
+        src='https://cdn.firebase.com/v0/firebase-auth-client.js'>
+</script>
+<style>
+html,body {
+	height: 100%;
+}
+
+
+</style>
+<link href="/dojo/dojo-1.8.3/dojox/mobile/themes/common/domButtons/DomButtonRedBadge.css" rel="stylesheet"/>
+<script>
+	inDebug = false
+</script>
+<!-- Our own style extensions / overrides -->
+</head>
+<body>
+
+	<div id="place" ></div>
+
+	<script>
+	
+	
+		require([
+	         "dojo/ready",
+	         "com/wcg/mobile/Application",
+	         "dojox/mobile",
+	         "dojox/mobile/parser",
+	         "dojox/mobile/deviceTheme",
+			"dojox/mobile/compat"
+	     ], function(ready, Application){
+	         ready(function(){
+				document.body.style.display="none";
+	             var application = new Application({"class":"wcgApplication"});
+	             application.placeAt("place");
+	             application.startup();
+				document.body.style.display="";
+	         });
+	     });
+	</script>
+</body>
+</html>

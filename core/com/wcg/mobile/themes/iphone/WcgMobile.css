@@ -1,0 +1,761 @@
+/* BODY */
+.mobile body {
+	xbackground-color: #303030;
+	xbackground: url("../../images/left_menu_pattern.png") repeat scroll 0 0 transparent;
+    background-color: #242424;
+    background-image: linear-gradient(to bottom, #3A3A3A, #000000);
+    background-repeat: repeat-x;
+    font: 14px ArialMT !important;
+}
+/* END BODY */
+
+/* ALERTS VIEW */
+
+/* The list */
+#AlertsView .mblRoundRectList {
+	margin: 0 0 0 0;
+	background-color: transparent;
+	border-radius: 0 0 0 0;
+	height: 100%;
+	width: 250px;
+	border: 0px;
+}
+
+/* The first list item */
+#AlertsView .mblRoundRectList .mblListItem:first-child, .mblRoundRectList .mblEdgeToEdgeCategory:first-child
+{
+	border-radius: 0 0 0 0;
+}
+
+#AlertsView .mblRoundRectList .mblListItem
+{
+	border-radius: 0 0 0 0;
+	background-image: linear-gradient(to bottom, #3A3A3A, #000000);
+	height: 70px;
+	border: 0px;
+}
+
+/* Mail Content Pane */
+#AlertsView .mailContent {
+	overflow: hidden;
+	position: absolute;
+	left: 260px;
+	bottom: 0px;
+	right: 4px;
+	width: auto;
+}
+
+.wcgApplication #AlertsView .mailContent .mblScrollableViewContainer
+{
+	height: 100% !important;
+}
+
+/* Message Content Div */
+#AlertsView .messageContent
+{
+	border: 1px solid pink;
+	height: 100%;
+}
+
+/* mail content round rectangle */
+.mailContent .mblRoundRect
+{
+	border-radius: 0px;
+	box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+	position: absolute;
+	right: 0;
+	left: 0;
+	bottom: 10px;
+	top: 0;
+}
+/* Contracts Summary */
+#ContractsView .mblEdgeToEdgeList
+{
+	background-image: linear-gradient(to bottom, #3A3A3A, #000000);
+}
+
+#ContractsView .contractList .mblListItem .mblListItemLabel
+{
+	padding-top: 0;
+}
+
+.appLogo{
+	position:absolute;
+	width:200px;
+	height:100px;
+	background: url("../../images/calms2.png") no-repeat center center transparent;
+	PartExchangeView:1000;
+	height: 60px;
+}
+
+.companyLogoView
+{
+	position: absolute;
+	bottom: 8px;
+	left: 2px;
+}
+
+.companyLogo{
+	position: absolute;
+	width:100px;
+	height:100px;
+	background: url("../../images/wcg-logo-trans.png") no-repeat center 10px transparent;
+	z-index:2000;
+	width: 195px;
+	height: 102px;
+	bottom: 0px;
+	float: left;
+}
+
+.facebookLogo
+{
+	background: url("../../images/facebook.png") no-repeat center center transparent;
+	position:absolute;
+	bottom:10px;
+	left: 40px;
+	width:40px;
+	height: 40px;
+}
+
+.twitterLogo
+{
+	background: url("../../images/twitter.png") no-repeat center center transparent;
+	position:absolute;
+	bottom:10px;
+	left: 80px;
+	width:40px;
+	height: 40px;
+}
+
+.linkedinLogo
+{
+	background: url("../../images/linkedin.png") no-repeat center center transparent;
+	position:absolute;
+	bottom:10px;
+	left: 120px;
+	width:40px;
+	height: 40px;
+}
+/* LEFT MENU */
+
+.leftMenu {
+	position:absolute;
+	top:0;
+	bottom:0;
+	width: 182px;
+	float: left;
+	/* Adam S - for some reason the linear-gradient having issues on ipad
+		so replaced with image */
+	xbackground-image: linear-gradient(to bottom, #3A3A3A, #000000);
+	background: url("../../images/left_menu_background.png") repeat scroll 0 0 transparent;
+	xbackground-color: transparent;
+
+}
+
+#place, .wcgApplication {
+	height: 100%;
+	overflow: hidden;
+}
+
+.contentView {
+	position: absolute;
+	left: 190px;
+	right: 10px;
+	bottom: 0px;
+	top: 0;
+	width: auto;
+	overflow: hidden;
+}
+
+.personalContent {
+	position: absolute;
+	left: 190px;
+	right: 15px;
+	bottom: 0px;
+	top: 0;
+}
+
+.helpContent
+{
+	position: absolute;
+	left: 190px;
+	right: 15px;
+	bottom: 0px;
+	top: 0;
+}
+
+.mblIconMenu
+{
+
+	position: absolute;
+	top:0px;
+	left:0px;
+	width: auto;
+	height: auto;
+	margin:0px;
+	bottom:0px;
+	right:0px;
+	border-radius: 0px;
+	text-align: center;
+	-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+	padding: 0px;
+	xbackground-image: -webkit-gradient(linear, left top, left bottom, from(rgba(102, 102, 119, 0.85)), to(rgba(4, 4, 4, 0.85)), color-stop(0.35, rgba(22, 22, 30, 0.85)));
+	background-image: none;
+	border: 0px solid #9a9a9e;
+	border-top-color: #f2f2f3;
+	-webkit-box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.5);
+}
+.mblIconMenuItemLastRow.mblIconMenuItemFirstColumn,
+.mblIconMenuItemLastRow.mblIconMenuItemLastColumn
+{
+	border-radius: 0px;
+}
+
+.mblIconMenuItemFirstRow.mblIconMenuItemFirstColumn,
+.mblIconMenuItemFirstRow.mblIconMenuItemLastColumn
+
+{
+	border-radius: 0px;
+}
+
+.mblIconMenuItem {
+	float: left;
+	list-style-type: none;
+	-webkit-box-sizing: border-box;
+	border-left: 0px solid #6b6c6f;
+	border-bottom: 0px solid #6b6c6f;
+	border-radius: 0 0 0 0;
+	background-color:transparent;
+
+}
+
+.mblIconMenuItemLabel
+{
+	padding-top:10px;
+	font-size: 16px;
+}
+
+.wcgApplication .leftMenu .mblListItemSelected
+{
+	background: url("../../images/left_menu_active.png") no-repeat left top !important;
+}
+
+.wcgApplication .contractList .mblListItemSelected
+{
+	background: url("../../images/inner_list_active.png") repeat-x left top !important;
+}
+
+.wcgApplication .contractList .mblListItem
+{
+	height: 50px;
+	background: url("../../images/inner_list_inactive.png") repeat-x left top;
+	border-bottom: 0px;
+}
+
+.wcgApplication .contractList .mblListItemLabel
+{
+	top: 4px;
+    height: 100%;
+    text-overflow: ellipsis;
+    white-space: wrap;
+    color: white;
+    padding-top: 15px;
+    padding-left: 1px;
+    font-size: 15px;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
+    font-family: HelveticaNeue-CondensedBold;
+}
+
+.wcgApplication .leftMenu .mblListItem
+{
+	height:70px;
+	border-bottom: 0px;
+	background: url("../../images/left_menu_inactive.png") no-repeat left top;
+}
+
+.mblDomButtonCheck
+{
+	visibility: collapse;
+	width:0px;
+	height:0px;
+}
+
+.wcgApplication .leftMenu .mblListItemIcon
+{
+	margin-top: 24px;
+	padding-left: 10px;
+}
+
+.mblListItemLabel
+{
+    height: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: wrap;
+    color:white;
+    padding-top: 15px;
+    padding-left: 1px;
+    font-size: 15px;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
+    font-family: HelveticaNeue-CondensedBold;
+}
+
+/* END LEFT MENU */
+
+.topMenu {
+	overflow: hidden;
+	background: none no-repeat top right #FFF;
+}
+
+.mblSpriteIcon
+{
+top: -14px;
+	}
+
+.wcgApplication .topMenu .mblTabBarFlatTab
+{
+   background: url("../../images/nav-gradient.png") repeat-x scroll 0 0 #03509C;
+    border-top: 0px;
+    border-bottom: 0px;
+    height: 60px;
+    padding-left: 191px !important;
+}
+
+.mblTabBarTabBar .mblTabBarButtonLabel
+{
+    color: #979797;
+    font-family: "Helvetica Neue",Helvetica;
+    font-size: 12px;
+    left: 45px;
+    position: absolute;
+    top: 20px;
+}
+
+.wcgApplication .topMenu .mblTabBar .mblTabBarButton {
+ 	background-image: none;
+    font-family: Helvetica;
+    font-size: 12px;
+    font-weight: bold;
+    margin-right: 10px;
+    padding: 20px 7px 7px;
+    height: 33px;
+    text-align: center;
+    text-shadow: 0 -1px 0 rgba(100, 100, 100, 0.6);
+    border-image: url("../../images/nav-border.png") 0 0 0 10;
+}
+
+.logoutButton
+{
+	float:right;
+}
+
+.mblTabBarFlatTab .mblTabBarButtonHasIcon .mblTabBarButtonLabel
+{
+	margin-left: 30px;
+	padding-top: 3px;
+	font-size: 15px;
+	font-family: HelveticaNeue-CondensedBold;
+	line-height: 8px;
+}
+
+.wcgApplication .topMenu .mblTabBarFlatTab .mblDomButtonRedBadge
+{
+	right: 43px !important;
+	top: 7px !important;
+}
+
+.mblTabBarFlatTab .mblTabBarButtonIconArea
+{
+	top: 15px;
+}
+
+.mblTabBarButtonSelected
+{
+	background: url("../../images/nav-active.png") repeat-x 0 bottom !important;
+
+}
+
+.wcgApplication .topMenu .mblTabBarSegmentedControl, .mblTabBarStandardTab
+{
+    background: url("../../images/nav-gradient.png") repeat-x scroll 0 0 #03509C;
+    border-top: 0px;
+    border-bottom: 0px;
+    height: 60px;
+    padding-left: 200px;
+}
+
+.topMenu .mblTabBarTabBar
+{
+	background-color: #fff;
+	border-top:0px;
+	border-bottom:0px;
+	padding-left: 200px;
+	height: 61px;
+    background: url("../../images/nav-gradient.png") repeat-x scroll 0 0 #03509C;
+
+}
+
+.avatarMenu {
+	width: 175px;
+	height: 60px;
+	background: url("../../images/nav-gradient.png") repeat-x scroll 0 0 #03509C;
+	position:absolute;
+	right: 0px;
+	top:0px;
+}
+
+.avatarPicture
+{
+    background: url("../../images/avatar.png") no-repeat scroll left top transparent;
+    height: inherit;
+    margin-left: 10px;
+    margin-top: 3px;
+}
+
+.avatarMenu .avatarName
+{
+	color: white;
+	font-weight: bold;
+	position:absolute;
+	top: 21px;
+	left: 63px;
+	text-transform: lowercase;
+	text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
+	font-size: 15px;
+	font-family: HelveticaNeue-CondensedBold
+}
+
+.avatarMenu .avatarLogout
+{
+    background: url("../../images/logout.png") no-repeat scroll left top transparent;
+    height: inherit;
+    margin-top: 2px;
+    position: absolute;
+    right: 0;
+    top: 10px;
+    width: 40px;
+}
+
+.detailTitleBar
+{
+	background-color: red;
+	height:70px;
+	background-image: linear-gradient(to bottom, #4184C9, #26598E);
+	background-repeat: repeat-x;
+	text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
+}
+
+#PersonalView .mblRoundRectList {
+	margin: 1px 0 8px 0;
+	border-radius: 0px;
+	border: 0px;
+}
+
+#PersonalSummaryView h2, #AddressView h2
+{
+	font-size: 15px;
+	height: 35px;
+	background: url("../../images/sub-header.png") repeat 0 0 #245588;
+	text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
+	margin:0px;
+	border: 0px;
+	color: white;
+	padding-left: 10px;
+	line-height: 35px;
+	font-family: HelveticaNeue-CondensedBold;
+	box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2) inset;
+}
+
+#AlertsView, #ContractsView, #PersonalView, #NewFinanceView, #SettingsView, #HelpView  {
+	clear: both;
+	position: absolute;
+	overflow: hidden;
+	margin: 8px;
+	top: 60px !important;
+	bottom: 0;
+}
+
+#FaqsView
+{
+	clear: both;
+	height: 100%;
+	overflow: hidden;
+	xmargin: 8px;
+}
+
+#FaqsView .mblAccordion
+{
+	border-width:0px;
+	background-color: white;
+}
+
+#FaqsView .mblAccordion .mblAccordionTitle
+{
+	font-size: 15px;
+	height: 35px;
+	background: url("../../images/sub-header.png") repeat 0 0 #245588;
+	text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
+	margin:0px;
+	color: white;
+	padding-left: 10px;
+	line-height: 35px;
+	font-family: HelveticaNeue-CondensedBold;
+	box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2) inset;
+	border: 0px;
+}
+
+#FaqsView .mblAccordion .mblAccordionTitleAnchor
+{
+	font-size: 14px;
+	text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
+	color: white;
+	padding-left: 5px;
+	line-height: 35px;
+	font-family: HelveticaNeue-CondensedBold;
+}
+#FaqsView .mblAccordion .mblAccordionPane
+{
+	padding: 10px 8px 4px 25px;
+	font-size: 15px;
+}
+
+#FaqsView .tooltipPane
+{
+    background-color: #FFFFCA;
+    border: 1px solid gray;
+    color: #000023;
+    height: 70px;
+    margin-bottom: 8px;
+}
+
+.mailContent .mblRoundRect {
+	margin: 2px 5px 0 0;
+}
+
+.personalSummaryLabel {
+	display: inline-block;
+	width: 20%;
+	border-right-style: solid;
+	border-right-width: 1px;
+}
+.personalSummaryValue {
+	display: inline-block;
+	width: 75%;
+	padding-left: 10px;
+
+}
+
+.personalSummaryValue .mblTextBox {
+	width: 100%;
+}
+
+#PersonalSummaryView {
+	width: 100%;
+}
+
+.personalSummaryValue .mblTextBox {
+	border: none;
+}
+
+#AddressView {
+	width: 100%;
+}
+
+#AddressView .mblRoundRectList {
+	width: 100%
+}
+
+#AddressView .mblRoundRectList .mblListItem {
+	width: 100%;
+}
+
+.textBoxDisabled {
+	background-color: white;
+	color: rgb(199, 199, 194);
+}
+
+.componentHidden {
+	display: none !important;
+}
+
+#pendingAddressChangeWarning {
+	background-color: #FFFFCA;
+	border-radius: 0px;
+	padding: 10px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+#AddressView button {
+	width: 220px;
+	margin-left: 130px;
+/* 	margin-right: auto; */
+	display: inline;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#03509C), to(#00305B)));
+	border-radius: 0px;
+	height: 45px;
+	font-family: HelveticaNeue-CondensedBold;
+	font-size:16px;
+}
+
+#pendingAddressChangeWarning .dijitUploader {
+	padding: 10px;
+	border-radius: 10px;
+	background-color: black;
+	color: white;
+	display: block;
+	width: 180px;
+	margin: auto;
+
+}
+
+.addressUploadDocsButton {
+	padding-top: 7px;
+    padding-bottom: 6px;
+    padding-right: 4px;
+    padding-left: 3px;
+}
+
+.addressUploadDocsButton input {
+	width: 116px;
+}
+
+
+
+.redButton {
+  border-color: #cc3333;
+  background-image: url(images/red-button-bg.png);
+  background: -webkit-gradient(linear, left top, left bottom, from(#D3656D), to(#BC1320), color-stop(0.5, #C9404B), color-stop(0.5, #BC1421));
+}
+.redButtonSelected {
+  background-image: url(images/red-button-sel-bg.png);
+  background: -webkit-gradient(linear, left top, left bottom, from(#AF333C), to(#880E17), color-stop(0.5, #952B33), color-stop(0.5, #870F18));
+}
+
+#textBoxAndButtonContainer {
+    height: 20%;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#chatMessageContainer {
+    height: 70%;
+    overflow-y: auto;
+    position: relative;
+
+}
+#chatMessages {
+    height: auto;
+    line-height: 100%;
+    font-size: 10pt;
+    font-weight: normal;
+    position: absolute;
+    left: -8px;
+    width: 94%;
+    bottom:0px;
+    
+}
+
+#sendMessageButton {
+    margin-top: 5px;
+    width: 100%;
+    height: 30%
+}
+
+#chatMessageBox {
+    width: 99%;
+    margin-top: 5px;
+    height: 40%;
+}
+
+#opener {
+    height: 60%;
+    width: 70%;
+}
+
+#chatWidget {
+    height: 100%;
+    width: 100%;
+}
+
+#ContactUsView {
+	width: 98%;
+}
+
+#contactUs, #chatLauncher {
+	background-color: white;
+	border-radius: 5px;
+	padding: 10px;
+	margin-top:10px;
+
+}
+
+.topMenu #topmenu-chat .mblBadge {
+	right: 30px !important
+}
+
+#ChatView {
+	height: 100%;
+	width: 100%
+}
+
+#chatWindow {
+	height: 100%;
+	width: 100%
+}
+
+#MapView{
+	width:100%;
+	height:100%;
+}
+
+#PartExchangeView .mblSwapView {
+	position: absolute;
+	bottom: 0px;
+	height: auto !important;
+}
+
+#PartExchangeView .mblPageIndicator {
+	bottom: 0;
+}
+#PartExchangeView .mblCarouselHeaderBar {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+#PartExchangeView .mblCarouselPages {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+#PartExchangeView {
+	color: white;
+}
+
+.teaserImage {
+	float: left;
+	margin:0 8px 8px 0;
+}
+.deal {
+	clear: both;
+}
+
+/*
+ use these to style in left right arrows on carousel
+*/
+.right.mblCarouselSlot {
+	
+}
+.left.mblCarouselSlot {
+	
+}
+.center.mblCarouselSlot {
+	
+}
